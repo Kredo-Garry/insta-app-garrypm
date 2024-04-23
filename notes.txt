@@ -1,0 +1,27 @@
+ ---- USERS----
+To deactivate a user, we will use "SoftDeletes"  in Laravel
+
+- The "SoftDeletes" will add additional column in our users table (deleted_at) column
+- The deleted_at column will contain the date and time that the user is soft deleted
+- When the user is softdelete, the user will be hidden from the application, but the data will
+  be retain in the database, which will be use for restore/or activating the user again.
+
+
+  **********************************************************************************
+
+  Middleware --> what is middleware?
+  Answer: it is a mechanism for inspecting and filtering the HTTP traffic request.
+  The Laravel provides "Auth middleware" to verify if the user is authenticated.
+
+  Think of the middleware as an extra layer of protection, that examines the request going through the application.
+  We have to create and use our own middleware, and we will call "AdminMiddleware"
+
+  What is the purpose of our AdminMiddleware?
+  -> is allow or deny access to the Admin Dashboard. Our basis for this is the role_id from the database. If the 
+  role_id is 1, then the user can access the Admin Dashboard, if the role_id is 2, then the user cannot access the admin dashboard.
+
+  **********************************************************************************
+  Database Seeder (Seeding the database)
+  
+  -> The user cannot create post if the categories table is empty, therefore we have to seed (add) the database with data
+  -> the seeder can create a default data into our database tables
