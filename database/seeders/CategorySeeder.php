@@ -23,10 +23,35 @@ class CategorySeeder extends Seeder
         /** Note: make sure there is no DUPLICATE name in categories table */
         $categories = [
             [
-                'name' => 'PHP Framework',
+                'name' => 'Travel',
                 'created_at' => now(),
                 'updated_at' => now()
             ],
+            [
+                'name' => 'Food',
+                'created_at' => now(),
+                'updated_at' => now()
+            ],
+            [
+                'name' => 'Music',
+                'created_at' => now(),
+                'updated_at' => now()
+            ],
+            [
+                'name' => 'Technology',
+                'created_at' => now(),
+                'updated_at' => now()
+            ],
+            [
+                'name' => 'Career',
+                'created_at' => now(),
+                'updated_at' => now()
+            ],
+            [
+                'name' => 'Movie',
+                'created_at' => now(),
+                'updated_at' => now()
+            ]
            
             /** note: you can add any name of categories as much as you can */
         ];
